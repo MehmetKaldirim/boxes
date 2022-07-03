@@ -1,6 +1,8 @@
 import React from "react";
 import boxes from "./boxes";
 import Box from "./components/Box";
+import Form from "./components/Form";
+import SignUp from "./components/SignUp";
 
 export default function App() {
   const [squares, setSquares] = React.useState(boxes);
@@ -37,5 +39,15 @@ export default function App() {
     <Box key={square.id} id={square.id} on={square.on} toggle={toggle} />
   ));
 
-  return <main>{squareElements}</main>;
+  return (
+    <main>
+      <div>{squareElements}</div>
+      <div>
+        <Form />
+      </div>
+      <div>
+        <SignUp />
+      </div>
+    </main>
+  );
 }
